@@ -1,0 +1,108 @@
+@import "./buttons.css";
+
+body {
+  background-color: #43dde6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ellipse-top-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  transform: translate(-34%, -64%);
+  z-index: -1;
+}
+
+.ellipse-bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 700px;
+  height: 700px;
+  transform: translate(38%, 38%);
+  z-index: -1;
+}
+
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+}
+
+.player {
+  position: relative;
+}
+
+.player video {
+  height: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.player-title {
+  color: white;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 20px;
+}
+
+.player-actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.player-progress {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 31px 20px;
+  height: 8px;
+}
+
+.player-progress input {
+  flex: 1;
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.player:hover .player-overlay {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .ellipse-top-left,
+  .ellipse-bottom-right {
+    width: 250px;
+    height: 250px;
+  }
+  .ellipse-top-left {
+    transform: translate(-34%, -36%);
+  }
+  .ellipse-bottom-right {
+    transform: translate(34%, 34%);
+  }
+  .wrapper {
+    margin: 0 16px;
+  }
+  .player video {
+    inline-size: 100%;
+  }
+}
