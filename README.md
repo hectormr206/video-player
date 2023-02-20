@@ -4,11 +4,11 @@ Este es el proyecto del curso de introducción al desarrollo web
 
 ## Desktop
 
-<img width="400px"  src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/Video%20player/desktop-player.png" />
+<img width="400px"  src="./assets/images/Desktop.png" />
 
 ## Mobile
 
-<img width="400px"  src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/Video%20player/mobile-player.png" />
+<img width="400px"  src="./assets/images/Mobile.png" />
 
 ## Créditos
 
